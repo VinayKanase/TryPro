@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 64.5%;
+}
+body {
+  color: white;
+  font-family: Poppins, sans-serif;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+.cont {
+  /* https://images.pexels.com/photos/3076516/pexels-photo-3076516.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 */
+  background: url("https://images.pexels.com/photos/50597/man-male-boy-a-person-50597.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
+    black center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.logo-name {
+  border: 4px double white;
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  border-radius: 25px;
+  margin: 8px;
+}
+.logo-name img {
+  width: 60px;
+  height: 30px;
+  align-content: center;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo-name h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.nav .navlinks {
+  float: right;
+  list-style-type: none;
+  position: absolute;
+  top: 3.9rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  transform: translateY(-1.8rem);
+}
+.nav .navlinks li {
+  float: left;
+  margin: 18px;
+}
+.nav .navlinks li a {
+  color: white;
+  text-decoration: none;
+}
+.nav .navlinks li a:hover {
+  color: rgb(228, 75, 75);
+}
+.nav .navlinks li button {
+  padding: 8px 14px;
+  background: rgb(228, 75, 75);
+  color: white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border: none;
+  outline: none;
+  /* display: none; */
+  border-radius: 10px;
+}
+.nav .navlinks li button:hover {
+  color: rgb(228, 75, 75);
+  background-color: rgb(29, 25, 25);
+}
+.nav .navlinks li button:active {
+  transform: scale(1.1);
+}
+.hamburger {
+  position: absolute;
+  top: 18px;
+  left: 100%;
+  width: 100px;
+  transform: translateX(-50%);
+  display: none;
+  cursor: pointer;
+}
+.line1,
+.line2,
+.line3 {
+  width: 24px;
+  height: 3px;
+  margin: 4px;
+  background: white;
+  transition: transform 0.3s;
+}
+.toggle.line1 {
+  transform: rotate(45deg) translate(4px, 6px);
+}
+.toggle.line2 {
+  opacity: 0;
+}
+.toggle.line3 {
+  transform: rotate(-45deg) translate(4px, -6px);
+}
+.signup {
+  background: linear-gradient(120deg, rgb(202, 182, 182), white);
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, 0%);
+  height: 300px;
+  border-radius: 10px;
+  /* animation: inout 0.4s cubic-bezier(0, 1.38, 0.58, 1); */
+  display: none;
+}
+.signup .crossout,
+.login .crossout {
+  position: absolute;
+  right: 10px;
+  padding: 8px;
+}
+.crossout button {
+  padding: 3px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.crossout button .cross1,
+.crossout button .cross2 {
+  width: 13px;
+  height: 2px;
+  margin: 2px;
+  background-color: black;
+  pointer-events: none;
+}
+.crossout button .cross1 {
+  transform: rotate(45deg) translate(3px, 3px);
+}
+.crossout button .cross2 {
+  transform: rotate(-45deg);
+}
+.signup form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 20px;
+  font-size: 1.8rem;
+}
+.signup form input {
+  padding: 10px 20px;
+  background: transparent;
+  margin: 6px 0px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.signup form button {
+  padding: 4px 8px;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  margin: 10px 0px;
+  transform: translate(-50%, 10px);
+  font-size: 1.5rem;
+  background: rgb(228, 75, 75);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+.login {
+  background: linear-gradient(120deg, rgb(202, 182, 182), white);
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, 0%);
+  height: 300px;
+  border-radius: 10px;
+  display: none;
+  /* animation: inout 0.4s cubic-bezier(0, 1.38, 0.58, 1); */
+}
+.login form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 1.8rem;
+}
+.login form input {
+  padding: 10px 20px;
+  background: transparent;
+  margin: 6px 0px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.login form .check {
+  display: inline-block;
+  /* background-color: black; */
+  margin: 30px 0px;
+  color: black;
+}
+.login form button {
+  padding: 4px 8px;
+  width: 50%;
+  position: relative;
+  top: -10px;
+  left: 50%;
+  /* margin: 10px 0px; */
+  transform: translate(-50%, 10px);
+  font-size: 1.5rem;
+  background: rgb(228, 75, 75);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+::placeholder {
+  color: black;
+  font-size: 1.3rem;
+}
+@keyframes inout {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+@keyframes outin {
+  0% {
+    top: 10px;
+  }
+  100% {
+    top: -200px;
+  }
+}
+@keyframes comein {
+  0% {
+    clip-path: circle(200px at 50% -200px);
+  }
+  50% {
+    clip-path: circle(60vh at 50% -200vh);
+  }
+  100% {
+    clip-path: circle(150vh at 50% -200px);
+  }
+}
+@keyframes goout {
+  0% {
+    clip-path: circle(150vh at 50% -200px);
+  }
+  50% {
+    clip-path: circle(60vh at 50% -200vh);
+  }
+  100% {
+    clip-path: circle(200pxvh at 50% -200px);
+  }
+}
+@media screen and (max-width: 1020px) {
+  html {
+    font-size: 50%;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav .navlinks {
+    float: none;
+    list-style-type: none;
+    position: relative;
+    top: 0;
+    /* right: 1rem; */
+    font-size: 2.7rem;
+    font-weight: 400;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    /* animation: goout 0.4s linear; */
+  }
+  .nav .navlinks.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .nav .navlinks li button {
+    padding: 14px 24px;
+    background: rgb(228, 75, 75);
+    color: white;
+    font-weight: 600;
+    font-size: 1.7rem;
+    border: none;
+    outline: none;
+    /* display: none; */
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .signup,
+  .login {
+    width: 50%;
+  }
+  .check span {
+    font-size: 1.6rem;
+  }
+}
